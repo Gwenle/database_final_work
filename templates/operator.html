@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ch">
+<style type="text/css">
+#fu
+  {
+  font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 35%;
+  border-collapse:collapse;
+  margin-left: auto;
+  margin-right:auto;
+  }
+</style>
+
+<script>
+    function helo()
+    {
+        parent.location.reload();
+    }
+</script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="fu">
+    <form action="/util" method="post">
+<textarea name="message" style="height:
+350px;width:600px;resize: none;font-size:26px; color:#F00">{{ftd}}
+</textarea>
+    <button type="submit" onclick="helo()">Run</button><br>
+    </form>
+    {% if text %}
+    <p style="font-size:20px;">{{text|safe}}</p>
+    {% endif %}
+</div>
+</body>
+</html>

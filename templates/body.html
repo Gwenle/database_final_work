@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#section {
+    width:300px; margin-left:auto; margin-right:auto; text-algin:center"; min-height:100%;
+}
+#footer {
+    position:absolute;
+    clear: both;
+    bottom: 0px;
+    left: 0px;
+    background-color:black;
+    color:white;
+    width: 100%;
+    text-align:center;
+    padding:5px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header">
+<h1>高校学生就业管理系统</h1>
+</div>
+
+
+<div id="section">
+   {% if message %}
+    <h2 style="color:red">{{message}}</h2>
+    {% else %}
+    <h2>&nbsp<br/>&nbsp</h2>
+    {% endif %}
+    <form action="/" method="post">
+        <legend>&nbsp&nbsp&nbsp&nbsp请使用您的账户名和密码登录</legend>
+         <p><input name="username" placeholder="Username" value="{{ username }}"></p>
+         <p><input name="password" placeholder="Password" type="password"></p>
+         <p><button type="submit">Sign In</button></p>
+    </form>
+</div>
+
+<div id="footer">
+Copyright  by 高文乐,杜豪杰  All rights reserved.
+</div>
+</body>
+</html>

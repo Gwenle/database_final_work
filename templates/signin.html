@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>请登录</title>
+</head>
+
+<div style="width:300px; margin-left:auto; margin-right:auto; text-algin:center">
+<body>
+    <h2>高校学生就业管理系统</h2>
+    {% if message %}
+    <p style="color:red">{{message}}</p>
+    {% endif %}
+    <form action="/" method="post">
+        <legend>请使用您的账户名和密码登录</legend>
+         <p><input name="username" placeholder="Username" value="{{ username }}"></p>
+         <p><input name="password" placeholder="Password" type="password"></p>
+         <p><button type="submit">Sign In</button></p>
+    </form>
+</body>
+</div>
+</html>
